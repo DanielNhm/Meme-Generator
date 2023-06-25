@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Hippie;
+    src: url("fonts/HippieMoment.ttf");
+}
 * {
     box-sizing: border-box;
 }
@@ -214,10 +218,7 @@ canvas {
     margin-inline-start: 200px;
 }
 
-@font-face {
-    font-family: Hippie;
-    src: url("/fonts/HippieMoment.ttf");
-}
+
 
 @media screen and (max-width:1000px) {
     * {
