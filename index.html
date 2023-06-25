@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meme Generator</title>
     <link rel="stylesheet" href="css/main2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -23,6 +23,9 @@
         </div>
     </section>
     <section class="canvas-container hidden">
+        <canvas with="500px" height="500px">
+
+        </canvas>
         <input class="write" type="search" oninput="onSetLineText()" placeholder="write somthing" name="meme">
         <div class="input-container">
             <button onclick="onAddLine()">Add line</button>
@@ -36,9 +39,6 @@
             </button>
             <input class ="inputimg" type="file" class="file-input btn" name="image" onchange="onImgInput(event)" accept="image/*" />
         </div>
-        <canvas with="500px" height="500px">
-
-        </canvas>
         <a href="#" class="btn1" onclick="downloadImg(this)" download="my-img.jpg">Download</a>
     </section>
     <script src="js/storage.js"></script>

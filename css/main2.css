@@ -85,6 +85,7 @@ img:hover {
     display: grid;
     place-content: center;
     justify-content: center;
+    grid-auto-flow: column;
     gap: 2rem;
     grid-template-columns: repeat(5px, minmax(150px, 1fr));
 }
@@ -139,6 +140,7 @@ canvas {
     height: 500px;
     align-self: center;
     margin-inline-start: 200px;
+    margin-block-start: 10px;
 
 
 }
@@ -214,7 +216,7 @@ canvas {
 
 @font-face {
     font-family: Hippie;
-    src: url("/fonts/Hippie\ Moment.ttf");
+    src: url("/fonts/HippieMoment.ttf");
 }
 
 @media screen and (max-width:1000px) {
