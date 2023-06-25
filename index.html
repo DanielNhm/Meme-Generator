@@ -26,20 +26,26 @@
         <canvas with="500px" height="500px">
 
         </canvas>
-        <input class="write" type="search" oninput="onSetLineText()" placeholder="write somthing" name="meme">
         <div class="input-container">
-            <button onclick="onAddLine()">Add line</button>
-            <button onclick="onSwitchLine()">switch line</button>
+
+            <input class="write" type="search" oninput="onSetLineText()" placeholder="write somthing" name="meme">
+            <div class="part1">
+                <button onclick="onAddLine()">Add line</button>
+                <button onclick="onSwitchLine()">switch line</button>
+            </div>
+            <div class="part2">
             <i class="fa-solid fa-palette icon"></i>
             <input class="color" type="color" oninput="onSetColor()" name="color">
             <button onclick="onChangeSize(5)">A+</button>
             <button onclick="onChangeSize(-5)">A-</button>
+        </div>
             <button class="btn" onclick="onUploadImg()">
                 Share on Facebook
             </button>
-            <input class ="inputimg" type="file" class="file-input btn" name="image" onchange="onImgInput(event)" accept="image/*" />
+            <a href="#" class="btn1" onclick="downloadImg(this)" download="my-img.jpg">Download</a>
+            <input class="inputimg" type="file" class="file-input btn" name="image" onchange="onImgInput(event)"
+                accept="image/*" />
         </div>
-        <a href="#" class="btn1" onclick="downloadImg(this)" download="my-img.jpg">Download</a>
     </section>
     <script src="js/storage.js"></script>
     <script src="js/service.js"></script>
