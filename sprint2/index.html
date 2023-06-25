@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="css/main2.css">
+    <script src="https://kit.fontawesome.com/6864b9206a.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="onInit()">
+    <header class="main-header">
+        <div class="logo">Meme Generator</div>
+        <nav class="main-nav-container">
+            <ul class="main-nav">
+                <li><button class="nav-bar" onclick="showGallery()">Gallery</button></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="gallery-container">
+        <div class="gallery">
+        </div>
+    </section>
+    <section class="canvas-container hidden">
+        <canvas with="500px" height="500px">
+
+        </canvas>
+        <div class="input-container">
+
+            <input class="write" type="search" oninput="onSetLineText()" placeholder="write somthing" name="meme">
+            <div class="part1">
+                <button class="add-line" onclick="onAddLine()">T</button>
+                <button class="switchline" onclick="onSwitchLine()"><i class="fa-solid fa-text-height"></i></button>
+            </div>
+            <div class="part2">
+                <label for="colorPicker" class="color-icon">
+                    <i class="fas fa-palette"></i>
+                </label>
+                <input class="color" type="color" oninput="onSetColor()" name="color" id="colorPicker">
+
+                <button class="plus" onclick="onChangeSize(5)"><i class="fa-solid fa-plus"></i>
+                </button>
+                <button class="minus" onclick="onChangeSize(-5)"><i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="share-container">
+            <button class="btn-face" onclick="onUploadImg()">
+                <i class="fa-brands fa-facebook"></i>
+            </button>
+            <a href="#" class="btn1" onclick="downloadImg(this)" download="my-img.jpg"> <i
+                    class="fa-solid fa-download"></i>
+            </a>
+            <label for="uploadImg" class="upload-icon">
+                <i class="fa-solid fa-file-arrow-up"></i>
+            </label>
+
+
+            <input class="inputimg" type="file" class="file-input btn" name="image" onchange="onImgInput(event)"
+                accept="image/*" id="uploadImg" />
+                </div>
+        </div>
+    </section>
+    <script src="js/storage.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/memeController.js"></script>
+</body>
+
+</html>
