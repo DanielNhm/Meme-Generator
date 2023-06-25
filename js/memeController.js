@@ -176,5 +176,9 @@ function renderFromUpload(img){
         XHR.send(formData)
     }
 
-    
+    document.getElementById('colorPicker').addEventListener('change', function() {
+        var colorValue = this.value;
+        // Do something with the selected color value
+        console.log(colorValue);
+      });
 
